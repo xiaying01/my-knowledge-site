@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: #ffffff; -webkit-font-smoothing: antialiased; }
+  a { color: #12433a; text-decoration: none; }
+  a:hover { color: #2b6d5d; }
+  * { box-sizing: border-box; }
+</style>
+</helmet>
+<div style="font-family: 'Noto Sans SC', 'PingFang SC', sans-serif; color: #1a1f1c; background: #ffffff; line-height: 1.7;">
+
+  <header style="display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding: 20px clamp(20px, 5vw, 72px); border-bottom: 1px solid #e2e6e3; position: sticky; top: 0; background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); z-index: 10;">
+    <div style="display: flex; align-items: baseline; gap: 8px;">
+      <span style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 20px; letter-spacing: 0.02em; color: #12433a;">{{ brandName }}</span>
+      <span style="font-size: 12px; color: #5f6763; letter-spacing: 0.16em; font-weight: 300;">FINANCIAL PLANNING</span>
+    </div>
+    <nav style="display: flex; align-items: center; gap: clamp(16px, 2vw, 28px); font-size: 14px; color: #464e49;">
+      <a href="#pain" style="color: #464e49;">常见困惑</a>
+      <a href="#about" style="color: #464e49;">关于我</a>
+      <a href="#pricing" style="color: #464e49;">服务方案</a>
+      <a href="#book" style="display: inline-flex; align-items: center; padding: 12px 20px; border-radius: 2px; background: #12433a; color: #ffffff;">预约咨询</a>
+    </nav>
+  </header>
+
+  <section style="padding: clamp(56px, 9vw, 116px) clamp(20px, 5vw, 72px) clamp(48px, 7vw, 88px); max-width: 1180px; margin: 0 auto;">
+    <div style="display: inline-flex; align-items: center; font-size: 13px; letter-spacing: 0.16em; color: #2b6d5d; margin-bottom: 24px;">服务湾区华人工程师家庭</div>
+    <h1 style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: clamp(32px, 5.2vw, 58px); line-height: 1.28; letter-spacing: -0.01em; margin: 0 0 24px; max-width: 20ch; text-wrap: pretty;">把你的 401K、RSU 和股票期权，放回一张算得清的表上。</h1>
+    <p style="font-size: clamp(17px, 1.6vw, 20px); color: #464e49; max-width: 52ch; margin: 0 0 40px; text-wrap: pretty;">我是面向 30–45 岁湾区华人工程师的个人理财顾问。帮你理清 401K、RSU、ISO 与 529 的配置顺序，把税务规划提前做在 vest 和行权之前——而不是报税季才发现钱白交了。</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 40px;">
+      <a href="#book" style="display: inline-flex; align-items: center; padding: 20px 36px; background: #12433a; color: #ffffff; border-radius: 2px; font-size: 18px; font-weight: 600;">预约 30 分钟免费沟通</a>
+      <a href="#pricing" style="display: inline-flex; align-items: center; padding: 16px 32px; border: 1px solid #cdd3d0; color: #1a1f1c; border-radius: 2px; font-size: 15px;">查看服务方案</a>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: clamp(16px, 3vw, 40px); padding-top: 24px; border-top: 1px solid #e2e6e3; font-size: 14px; color: #5f6763;">
+      <span>中英文沟通</span>
+      <span>只做规划，不销售金融产品</span>
+      <span>线上会议 / 湾区面谈</span>
+    </div>
+  </section>
+
+  <section id="pain" style="padding: clamp(56px, 8vw, 104px) clamp(20px, 5vw, 72px); background: #f5f7f6; border-top: 1px solid #e2e6e3; border-bottom: 1px solid #e2e6e3;">
+    <div style="max-width: 1180px; margin: 0 auto;">
+      <p style="font-size: 13px; letter-spacing: 0.16em; color: #2b6d5d; margin: 0 0 16px;">常见困惑</p>
+      <h2 style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: clamp(26px, 3.2vw, 38px); margin: 0 0 48px; max-width: 22ch; line-height: 1.35;">大部分工程师客户，来找我时都卡在这三件事上。</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: clamp(24px, 3vw, 44px);">
+        <div style="display: flex; flex-direction: column; gap: 16px; padding: 32px; background: #ffffff; border: 1px solid #e2e6e3;">
+          <span style="font-family: 'Noto Serif SC', serif; font-size: 13px; letter-spacing: 0.16em; color: #2b6d5d;">01</span>
+          <h3 style="font-family: 'Noto Serif SC', serif; font-size: 20px; font-weight: 600; margin: 0; line-height: 1.45;">RSU 一到手就被扣税，剩下的不知道怎么处理</h3>
+          <p style="margin: 0; color: #464e49; font-size: 16px;">公司默认代扣往往不够，报税时还要补一大笔。我们一起看清你的边际税率与预缴节奏，决定继续持有还是分批卖出，并降低单一公司股票的集中风险。</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 16px; padding: 32px; background: #ffffff; border: 1px solid #e2e6e3;">
+          <span style="font-family: 'Noto Serif SC', serif; font-size: 13px; letter-spacing: 0.16em; color: #2b6d5d;">02</span>
+          <h3 style="font-family: 'Noto Serif SC', serif; font-size: 20px; font-weight: 600; margin: 0; line-height: 1.45;">401K、Backdoor Roth、HSA 的顺序和额度总是搞不清</h3>
+          <p style="margin: 0; color: #464e49; font-size: 16px;">公司 match 有没有拿满、Mega Backdoor 值不值得做、ISO 行权会不会触发 AMT。这些决定一旦顺序错了，一年可能多交五位数的税。</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 16px; padding: 32px; background: #ffffff; border: 1px solid #e2e6e3;">
+          <span style="font-family: 'Noto Serif SC', serif; font-size: 13px; letter-spacing: 0.16em; color: #2b6d5d;">03</span>
+          <h3 style="font-family: 'Noto Serif SC', serif; font-size: 20px; font-weight: 600; margin: 0; line-height: 1.45;">孩子教育金、赡养父母、买房，全挤在同一笔现金流里</h3>
+          <p style="margin: 0; color: #464e49; font-size: 16px;">529 该存多少、首付要留多少流动性、跨境家庭的税务身份如何影响规划。把目标排进时间轴，你才清楚每一笔钱在为什么服务。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="padding: clamp(56px, 8vw, 104px) clamp(20px, 5vw, 72px);">
+    <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(32px, 5vw, 72px); align-items: start;">
+      <div style="min-width: 0;">
+        <img src="uploads/about.jpg" alt="顾问本人照片" style="width: 100%; max-width: 460px; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; display: block; border: 1px solid #d7dcd9;" />
+        <p style="font-size: 13px; color: #5f6763; margin: 16px 0 0; max-width: 460px;">{{ brandName }}｜{{ credentials }}｜湾区</p>
+      </div>
+      <div style="min-width: 0;">
+        <p style="font-size: 13px; letter-spacing: 0.16em; color: #2b6d5d; margin: 0 0 16px;">关于我</p>
+        <h2 style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: clamp(26px, 3.2vw, 38px); margin: 0 0 24px; line-height: 1.35;">我懂报表，也懂在湾区养一个家是什么感觉。</h2>
+        <p style="color: #464e49; margin: 0 0 16px; font-size: 18px;">我是 {{ brandName }}，持有 {{ credentials }} 资质。在转做理财规划之前，我在科技行业工作多年，亲历过 IPO、期权行权与裁员窗口，所以你正在纠结的问题，大多我自己也算过一遍。</p>
+        <p style="color: #464e49; margin: 0 0 32px; font-size: 18px;">我只提供规划与持续跟进，不销售保险或基金产品，收入完全来自客户本人。第一次沟通永远免费；如果聊下来我帮不上忙，我会直接说。</p>
+        <div style="display: grid; gap: 16px; font-size: 16px; color: #464e49; padding-top: 24px; border-top: 1px solid #e2e6e3;">
+          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #12433a; flex: none;"></span><span>专注群体：湾区华人工程师与双职工家庭</span></div>
+          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #12433a; flex: none;"></span><span>常见议题：RSU / ISO / NSO、Backdoor Roth、AMT、529、跨境税务身份</span></div>
+          <div style="display: flex; gap: 12px; align-items: baseline;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #12433a; flex: none;"></span><span>服务方式：中文或英文，线上会议或南湾面谈</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" style="padding: clamp(56px, 8vw, 104px) clamp(20px, 5vw, 72px); background: #f5f7f6; border-top: 1px solid #e2e6e3; border-bottom: 1px solid #e2e6e3;">
+    <div style="max-width: 1180px; margin: 0 auto;">
+      <p style="font-size: 13px; letter-spacing: 0.16em; color: #2b6d5d; margin: 0 0 16px;">服务方案</p>
+      <h2 style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: clamp(26px, 3.2vw, 38px); margin: 0 0 16px; line-height: 1.35;">两种方式，按你现在需要的深度选。</h2>
+      <p style="color: #464e49; margin: 0 0 48px; max-width: 56ch;">不确定选哪个也没关系——先做一次免费沟通，我会告诉你现阶段是否真的需要付费服务。</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(20px, 2.5vw, 32px); align-items: stretch;">
+
+        <div style="display: flex; flex-direction: column; border: 1px solid #d7dcd9; padding: clamp(24px, 3vw, 40px); background: #ffffff;">
+          <h3 style="font-family: 'Noto Serif SC', serif; font-size: 24px; font-weight: 600; margin: 0 0 8px;">一次性财务体检</h3>
+          <p style="color: #5f6763; font-size: 14px; margin: 0 0 24px;">适合第一次系统梳理、或今年有一次性决策（行权、跳槽、买房）。</p>
+          <sc-if value="{{ showPrices }}" hint-placeholder-val="{{ true }}">
+          <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 32px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 40px; font-weight: 600;">{{ priceOneTime }}</span><span style="color: #5f6763; font-size: 14px;">/ 一次</span></div>
+          </sc-if>
+          <sc-if value="{{ hidePrices }}" hint-placeholder-val="{{ false }}">
+          <div style="font-family: 'Noto Serif SC', serif; font-size: 24px; font-weight: 600; margin-bottom: 32px;">报价面谈后确认</div>
+          </sc-if>
+          <div style="display: grid; gap: 12px; font-size: 16px; color: #464e49; margin-bottom: 32px;">
+            <div style="display: flex; gap: 8px;"><span style="color: #12433a;">—</span><span>90 分钟深度会谈 + 会前资料梳理</span></div>
+            <div style="display: flex; gap: 8px;"><span style="color: #12433a;">—</span><span>401K / RSU / ISO / HSA 配置顺序建议</span></div>
+            <div style="display: flex; gap: 8px;"><span style="color: #12433a;">—</span><span>当年度税务节点与预缴提醒清单</span></div>
+            <div style="display: flex; gap: 8px;"><span style="color: #12433a;">—</span><span>一份书面行动方案（中英文任选）</span></div>
+            <div style="display: flex; gap: 8px;"><span style="color: #12433a;">—</span><span>会后 30 天邮件答疑</span></div>
+          </div>
+          <a href="#book" style="margin-top: auto; display: inline-flex; justify-content: center; padding: 16px 24px; border: 1px solid #12433a; color: #12433a; border-radius: 2px; font-size: 15px;">预约沟通</a>
+        </div>
+
+        <div style="display: flex; flex-direction: column; border: 1px solid #12433a; padding: clamp(24px, 3vw, 40px); background: #12433a; color: #e9efed;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px;">
+            <h3 style="font-family: 'Noto Serif SC', serif; font-size: 24px; font-weight: 700; margin: 0; color: #ffffff;">全年规划陪跑</h3>
+            <span style="font-size: 12px; letter-spacing: 0.1em; border: 1px solid #4d7f70; padding: 4px 12px; border-radius: 999px; color: #cfe0da;">多数客户选择</span>
+          </div>
+          <p style="color: #bfd4cd; font-size: 14px; margin: 0 0 24px;">适合 RSU 持续 vest、家庭目标较多、希望有人全年一起盯的工程师家庭。</p>
+          <sc-if value="{{ showPrices }}" hint-placeholder-val="{{ true }}">
+          <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 32px;"><span style="font-family: 'Noto Serif SC', serif; font-size: 40px; font-weight: 700; color: #ffffff;">{{ priceRetainer }}</span><span style="color: #bfd4cd; font-size: 14px;">/ 年</span></div>
+          </sc-if>
+          <sc-if value="{{ hidePrices }}" hint-placeholder-val="{{ false }}">
+          <div style="font-family: 'Noto Serif SC', serif; font-size: 24px; font-weight: 600; color: #f5f7f6; margin-bottom: 32px;">报价面谈后确认</div>
+          </sc-if>
+          <div style="display: grid; gap: 12px; font-size: 16px; color: #e6efec; margin-bottom: 32px;">
+            <div style="display: flex; gap: 8px;"><span style="color: #86ab9f;">—</span><span>包含一次性财务体检的全部内容</span></div>
+            <div style="display: flex; gap: 8px;"><span style="color: #86ab9f;">—</span><span>每季度一次复盘会议，跟踪执行进度</span></div>
+            <div style="display: flex; gap: 8px;"><span style="color: #86ab9f;">—</span><span>Vest / 行权窗口前的逐笔决策支持</span></div>
+            <div style="display: flex; gap: 8px;"><span style="color: #86ab9f;">—</span><span>年末税务规划与次年预缴安排</span></div>
+            <div style="display: flex; gap: 8px;"><span style="color: #86ab9f;">—</span><span>529、保险与遗产规划的整体协调</span></div>
+            <div style="display: flex; gap: 8px;"><span style="color: #86ab9f;">—</span><span>全年微信 / 邮件随时提问</span></div>
+          </div>
+          <a href="#book" style="margin-top: auto; display: inline-flex; justify-content: center; padding: 16px 24px; background: #ffffff; color: #12433a; border-radius: 2px; font-size: 15px; font-weight: 500;">预约沟通</a>
+        </div>
+      </div>
+      <p style="font-size: 14px; color: #5f6763; margin: 24px 0 0;">费用为规划服务费，不含任何产品佣金。具体报价会在免费沟通后依复杂度确认。</p>
+    </div>
+  </section>
+
+  <section id="book" style="padding: clamp(56px, 8vw, 104px) clamp(20px, 5vw, 72px);">
+    <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: clamp(32px, 5vw, 72px); align-items: start;">
+      <div>
+        <p style="font-size: 13px; letter-spacing: 0.16em; color: #2b6d5d; margin: 0 0 16px;">预约</p>
+        <h2 style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: clamp(26px, 3.2vw, 38px); margin: 0 0 24px; line-height: 1.35;">先聊 30 分钟，不收费，也不推销。</h2>
+        <p style="color: #464e49; margin: 0 0 20px; max-width: 46ch;">这次沟通的目的很简单：让我了解你的收入结构与家庭目标，也让你判断我是不是合适的人。会后我会给你两三条可以立刻执行的建议，无论是否合作。</p>
+        <p style="color: #5f6763; font-size: 14px; margin: 0;">如果时间不方便，直接加微信留言也可以，我会在一个工作日内回复。</p>
+      </div>
+      <div style="display: grid; gap: 16px;">
+        <sc-if value="{{ showCalendly }}" hint-placeholder-val="{{ true }}">
+        <a href="{{ calendlyUrl }}" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 24px 32px; background: #12433a; color: #ffffff; border-radius: 2px;">
+          <span style="display: grid; gap: 4px;"><span style="font-size: 18px; font-weight: 500;">在 Calendly 选时间</span><span style="font-size: 14px; color: #bfd4cd;">30 分钟线上视频，中英文皆可</span></span>
+          <span style="font-size: 20px;">→</span>
+        </a>
+        </sc-if>
+        <sc-if value="{{ showWechat }}" hint-placeholder-val="{{ true }}">
+        <div style="display: flex; align-items: center; gap: 24px; padding: 24px 32px; border: 1px solid #d7dcd9; background: #f5f7f6;">
+          <div style="width: 104px; height: 104px; flex: none; border: 1px solid #d7dcd9; background-image: repeating-linear-gradient(135deg, #f1f4f2 0 8px, #e9ecea 8px 16px); display: flex; align-items: center; justify-content: center; text-align: center;">
+            <span style="font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: #5f6763; padding: 4px;">微信二维码</span>
+          </div>
+          <div style="display: grid; gap: 8px; min-width: 0;">
+            <span style="font-size: 18px; font-weight: 500;">微信咨询</span>
+            <span style="font-size: 14px; color: #5f6763;">扫码或搜索微信号</span>
+            <span style="font-family: ui-monospace, Menlo, monospace; font-size: 14px; color: #12433a;">{{ wechatId }}</span>
+          </div>
+        </div>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding: 36px clamp(20px, 5vw, 72px) 48px; border-top: 1px solid #e2e6e3; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: baseline; font-size: 13px; color: #5f6763;">
+    <span>© 2026 {{ brandName }}｜{{ credentials }}</span>
+    <span style="max-width: 58ch;">本网站内容仅供教育与信息参考，不构成个别投资、税务或法律建议。</span>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;bookingMode&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Calendly + 微信&quot;,&quot;只用 Calendly&quot;,&quot;只用微信&quot;],&quot;default&quot;:&quot;Calendly + 微信&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;预约方式&quot;},&quot;showPrices&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;定价&quot;},&quot;brandName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Wei Chen 陈维&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;credentials&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;CFP®&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;priceOneTime&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;$1,500&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;定价&quot;},&quot;priceRetainer&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;$6,000&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;定价&quot;},&quot;wechatId&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;bayarea_cfp&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;联系方式&quot;},&quot;calendlyUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://calendly.com/&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;联系方式&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props;
+    const mode = p.bookingMode ?? "Calendly + 微信";
+    const showPrices = p.showPrices ?? true;
+    return {
+      showCalendly: mode !== "只用微信",
+      showWechat: mode !== "只用 Calendly",
+      showPrices: showPrices,
+      hidePrices: !showPrices,
+      brandName: p.brandName ?? "Wei Chen 陈维",
+      credentials: p.credentials ?? "CFP®",
+      priceOneTime: p.priceOneTime ?? "$1,500",
+      priceRetainer: p.priceRetainer ?? "$6,000",
+      wechatId: p.wechatId ?? "bayarea_cfp",
+      calendlyUrl: p.calendlyUrl ?? "https://calendly.com/",
+    };
+  }
+}
+</script>
+</body>
+</html>
