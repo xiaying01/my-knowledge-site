@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: #ffffff; -webkit-font-smoothing: antialiased; }
+  a { color: #12433a; text-decoration: none; }
+  a:hover { color: #2b6d5d; }
+  * { box-sizing: border-box; }
+</style>
+</helmet>
+<div style="font-family: 'Noto Sans SC', 'PingFang SC', sans-serif; color: #1a1f1c; background: #ffffff; line-height: 1.7;">
+
+  <header style="display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding: 20px clamp(20px, 5vw, 72px); border-bottom: 1px solid #e2e6e3; position: sticky; top: 0; background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); z-index: 10;">
+    <div style="display: flex; align-items: baseline; gap: 8px;">
+      <span style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 20px; letter-spacing: 0.02em; color: #12433a;">{{ brandName }}</span>
+      <span style="font-size: 13px; color: #5f6763; letter-spacing: 0.16em; font-weight: 300;">FINANCIAL PLANNING</span>
+    </div>
+    <nav style="display: flex; align-items: center; gap: clamp(16px, 2vw, 28px); font-size: 14px; color: #464e49;">
+      <a href="理财顾问%20Landing%20Page.dc.html#pain" style="color: #464e49;">常见困惑</a>
+      <a href="理财顾问%20Landing%20Page.dc.html#about" style="color: #464e49;">关于我</a>
+      <a href="理财顾问%20Landing%20Page.dc.html#pricing" style="color: #464e49;">服务方案</a>
+      <a href="理财顾问%20Landing%20Page.dc.html#book" style="display: inline-flex; align-items: center; padding: 12px 20px; border-radius: 2px; background: #12433a; color: #ffffff;">预约咨询</a>
+    </nav>
+  </header>
+
+  <section style="padding: clamp(56px, 8vw, 104px) clamp(20px, 5vw, 72px) 48px; max-width: 1180px; margin: 0 auto;">
+    <p style="font-size: 13px; letter-spacing: 0.16em; color: #2b6d5d; margin: 0 0 16px;">资源</p>
+    <h1 style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: clamp(32px, 5.2vw, 58px); line-height: 1.28; letter-spacing: -0.01em; margin: 0 0 24px; max-width: 20ch; text-wrap: pretty;">我写给工程师客户的文章与指南。</h1>
+    <p style="font-size: clamp(17px, 1.6vw, 20px); color: #464e49; max-width: 52ch; margin: 0;">都是客户反复问到的问题。先读一遍，再来聊，我们能把 30 分钟用在你的具体数字上。</p>
+  </section>
+
+  <section style="padding: 0 clamp(20px, 5vw, 72px) clamp(56px, 8vw, 104px); max-width: 1180px; margin: 0 auto;">
+    <div style="display: flex; flex-wrap: wrap; gap: 8px; padding-bottom: 24px; border-bottom: 1px solid #e2e6e3; margin-bottom: 8px;">
+      <sc-for list="{{ topics }}" as="topic" hint-placeholder-count="5">
+        <button type="button" onClick="{{ topic.select }}" style="{{ topic.style }}">{{ topic.label }}</button>
+      </sc-for>
+    </div>
+
+    <p style="font-size: 14px; color: #5f6763; margin: 0 0 32px;">{{ resultLabel }}</p>
+
+    <div style="display: grid; gap: 16px;">
+      <sc-for list="{{ articles }}" as="article" hint-placeholder-count="7">
+        <a href="#" style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px 40px; align-items: start; padding: 32px; border: 1px solid #e2e6e3; border-radius: 2px; background: #ffffff; color: #1a1f1c;">
+          <div style="display: grid; gap: 12px; min-width: 0;">
+            <span style="font-size: 13px; letter-spacing: 0.16em; color: #2b6d5d;">{{ article.topic }}</span>
+            <h2 style="font-family: 'Noto Serif SC', serif; font-size: 20px; font-weight: 600; line-height: 1.45; margin: 0; color: #1a1f1c;">{{ article.title }}</h2>
+            <p style="margin: 0; font-size: 16px; color: #464e49; max-width: 62ch;">{{ article.summary }}</p>
+          </div>
+          <div style="display: grid; gap: 4px; justify-items: end; text-align: right; font-size: 14px; color: #5f6763; white-space: nowrap;">
+            <span>{{ article.date }}</span>
+            <span>{{ article.readTime }}</span>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: clamp(56px, 8vw, 104px) clamp(20px, 5vw, 72px); background: #f5f7f6; border-top: 1px solid #e2e6e3; border-bottom: 1px solid #e2e6e3;">
+    <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: clamp(32px, 5vw, 72px); align-items: center;">
+      <div>
+        <p style="font-size: 13px; letter-spacing: 0.16em; color: #2b6d5d; margin: 0 0 16px;">下一步</p>
+        <h2 style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: clamp(26px, 3.2vw, 38px); margin: 0 0 24px; line-height: 1.35; max-width: 22ch;">读完了，想对着自己的数字算一遍？</h2>
+        <p style="margin: 0; font-size: 16px; color: #464e49; max-width: 46ch;">先聊 30 分钟，不收费，也不推销。会后我会给你两三条可以立刻执行的建议，无论是否合作。</p>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+        <a href="理财顾问%20Landing%20Page.dc.html#book" style="display: inline-flex; align-items: center; padding: 20px 36px; background: #12433a; color: #ffffff; border-radius: 2px; font-size: 18px; font-weight: 600;">预约 30 分钟免费沟通</a>
+        <a href="理财顾问%20Landing%20Page.dc.html#pricing" style="display: inline-flex; align-items: center; padding: 16px 32px; border: 1px solid #cdd3d0; color: #1a1f1c; border-radius: 2px; font-size: 16px;">查看服务方案</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding: 36px clamp(20px, 5vw, 72px) 48px; border-top: 1px solid #e2e6e3; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: baseline; font-size: 13px; color: #5f6763;">
+    <span>© 2026 {{ brandName }}｜{{ credentials }}</span>
+    <span style="max-width: 58ch;">本网站内容仅供教育与信息参考，不构成个别投资、税务或法律建议。</span>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;defaultTopic&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;全部&quot;,&quot;401K&quot;,&quot;RSU&quot;,&quot;税务规划&quot;,&quot;投资基础&quot;],&quot;default&quot;:&quot;全部&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;资源列表&quot;},&quot;showReadTime&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;资源列表&quot;},&quot;brandName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Wei Chen 陈维&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;credentials&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;CFP®&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+const ARTICLES = [
+  { topic: "RSU", title: "RSU vest 当天，公司代扣的 22% 为什么几乎总是不够", summary: "Supplemental wage 的固定代扣率和你的真实边际税率是两回事。这篇讲清楚差额从哪来、怎么估算，以及什么时候需要自己做预缴。", date: "2026 年 8 月 18 日", readTime: "9 分钟" },
+  { topic: "401K", title: "401K 的三个口袋：pre-tax、Roth、after-tax 到底怎么选", summary: "同一个账户里其实有三种钱，税务逻辑完全不同。用工程师熟悉的方式把三者的当下成本与将来成本摊开对比。", date: "2026 年 7 月 30 日", readTime: "12 分钟" },
+  { topic: "401K", title: "Mega Backdoor Roth：值得做，还是只是听起来厉害", summary: "先确认你的 plan 是否支持 in-plan conversion，再算这笔钱占用的现金流值不值。附一份自查清单。", date: "2026 年 7 月 9 日", readTime: "8 分钟" },
+  { topic: "税务规划", title: "ISO 行权与 AMT：在按下按钮之前要算的四个数字", summary: "bargain element、AMT 起征、当年可用现金、以及最坏情况下股价归零的后果。顺序错了，税单会比预期高一个量级。", date: "2026 年 6 月 22 日", readTime: "14 分钟" },
+  { topic: "税务规划", title: "跨境家庭的税务身份：父母探亲、海外账户与 FBAR", summary: "居住天数如何影响申报身份，哪些海外账户必须申报，以及常见的三个误解。写给有国内资产或父母长住的家庭。", date: "2026 年 5 月 28 日", readTime: "11 分钟" },
+  { topic: "投资基础", title: "单一公司股票占比多少算太多", summary: "集中持仓的风险不是股价会跌，而是工资和资产同时依赖同一家公司。给出一个可执行的分批减持框架。", date: "2026 年 5 月 6 日", readTime: "7 分钟" },
+  { topic: "投资基础", title: "529 该存多少：把教育金放回整体现金流里看", summary: "先算清退休缺口和首付需求，再决定 529 的年度额度。超额存入的机会成本比多数人想象的高。", date: "2026 年 4 月 15 日", readTime: "10 分钟" },
+];
+
+const TOPICS = ["全部", "401K", "RSU", "税务规划", "投资基础"];
+
+class Component extends DCLogic {
+  state = { topic: null };
+
+  get active() {
+    return this.state.topic ?? this.props.defaultTopic ?? "全部";
+  }
+
+  renderVals() {
+    const active = this.active;
+    const showReadTime = this.props.showReadTime ?? true;
+    const list = active === "全部" ? ARTICLES : ARTICLES.filter((a) => a.topic === active);
+
+    return {
+      brandName: this.props.brandName ?? "Wei Chen 陈维",
+      credentials: this.props.credentials ?? "CFP®",
+      resultLabel: active === "全部" ? `全部 ${list.length} 篇` : `${active} · ${list.length} 篇`,
+      articles: list.map((a) => ({ ...a, readTime: showReadTime ? `阅读 ${a.readTime}` : "" })),
+      topics: TOPICS.map((label) => {
+        const on = label === active;
+        return {
+          label,
+          select: () => this.setState({ topic: label }),
+          style: [
+            "font-family: inherit",
+            "font-size: 14px",
+            "line-height: 1.7",
+            "padding: 12px 20px",
+            "border-radius: 2px",
+            "cursor: pointer",
+            "transition: background 200ms cubic-bezier(0.2,0,0,1), color 200ms cubic-bezier(0.2,0,0,1)",
+            on ? "background: #12433a" : "background: #ffffff",
+            on ? "color: #ffffff" : "color: #464e49",
+            on ? "border: 1px solid #12433a" : "border: 1px solid #cdd3d0",
+          ].join("; "),
+        };
+      }),
+    };
+  }
+}
+</script>
+</body>
+</html>
